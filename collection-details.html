@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title id="pageTitle">Collection — Maison Élégance</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/variables.css">
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/typography.css">
@@ -29,7 +29,7 @@
 
 <main>
   <section class="page-hero" style="height:56vh;">
-    <img id="heroImg" src="https://images.unsplash.com/photo-1642174916136-e7d9247ffa1e?auto=format&fit=crop&w=1800&h=1000&q=80" alt="">
+    <img id="heroImg" src="https://images.unsplash.com/photo-1616244916660-d135a013d1f8?auto=format&fit=crop&w=1800&h=1000&q=80" alt="">
     <div class="page-hero__content">
       <p class="eyebrow" style="color:var(--color-gold-soft);">Featured Collection</p>
       <h1 id="collectionName">The Château Collection</h1>
@@ -64,9 +64,9 @@
     <div class="content">
       <div class="section-head"><div><p class="eyebrow">Continue Exploring</p><h2>Related Collections</h2></div></div>
       <div class="grid grid-3">
-        <a href="collections.html" class="category-card"><img src="https://images.unsplash.com/photo-1616244916660-d135a013d1f8?auto=format&fit=crop&w=700&h=500&q=80" alt=""><div class="category-card__overlay"><span class="category-card__label">Winter Editorial</span></div></a>
-        <a href="collections.html" class="category-card"><img src="https://images.unsplash.com/photo-1453396450673-3fe83d2db2c4?auto=format&fit=crop&w=700&h=500&q=80" alt=""><div class="category-card__overlay"><span class="category-card__label">Signature Tailoring</span></div></a>
-        <a href="collections.html" class="category-card"><img src="https://images.unsplash.com/photo-1576110598658-096ae24cdb97?auto=format&fit=crop&w=700&h=500&q=80" alt=""><div class="category-card__overlay"><span class="category-card__label">Essentials</span></div></a>
+        <a href="collections.html" class="category-card"><img src="https://images.unsplash.com/photo-1616406432452-07bc5938759d?auto=format&fit=crop&w=700&h=500&q=80" alt=""><div class="category-card__overlay"><span class="category-card__label">Winter Editorial</span></div></a>
+        <a href="collections.html" class="category-card"><img src="https://images.unsplash.com/photo-1728318817287-20d223d60086?auto=format&fit=crop&w=700&h=500&q=80" alt=""><div class="category-card__overlay"><span class="category-card__label">Signature Tailoring</span></div></a>
+        <a href="collections.html" class="category-card"><img src="https://images.unsplash.com/photo-1728318817167-902a85482317?auto=format&fit=crop&w=700&h=500&q=80" alt=""><div class="category-card__overlay"><span class="category-card__label">Essentials</span></div></a>
       </div>
     </div>
   </section>
@@ -145,9 +145,9 @@
 <script>
 const collectionData = {
   chateau: { name: 'The Château Collection', story: 'A study in restraint — silk, calfskin, and pearl, photographed at dusk in the Loire Valley. Nine pieces, each designed to be worn for decades, not seasons.', img: 'https://images.unsplash.com/photo-1642174916136-e7d9247ffa1e?auto=format&fit=crop&w=1800&h=1000&q=80' },
-  winter: { name: 'Winter Editorial', story: 'Structured outerwear and hand-finished leather boots, built for cold-weather cities without sacrificing line.', img: 'https://images.unsplash.com/photo-1616244916660-d135a013d1f8?auto=format&fit=crop&w=1800&h=1000&q=80' },
-  essentials: { name: 'Essentials', story: 'The foundation pieces every wardrobe returns to — merino knitwear, quilted leather, and clean tailoring staples.', img: 'https://images.unsplash.com/photo-1576110598658-096ae24cdb97?auto=format&fit=crop&w=1800&h=1000&q=80' },
-  tailoring: { name: 'Signature Tailoring', story: 'Half-canvas construction and natural shoulders, cut for men and women who dress for the room, not the trend.', img: 'https://images.unsplash.com/photo-1453396450673-3fe83d2db2c4?auto=format&fit=crop&w=1800&h=1000&q=80' }
+  winter: { name: 'Winter Editorial', story: 'Structured outerwear and hand-finished leather boots, built for cold-weather cities without sacrificing line.', img: 'https://images.unsplash.com/photo-1591288443491-145600b1a2b1?auto=format&fit=crop&w=1800&h=1000&q=80' },
+  essentials: { name: 'Essentials', story: 'The foundation pieces every wardrobe returns to — merino knitwear, quilted leather, and clean tailoring staples.', img: 'https://images.unsplash.com/photo-1453396450673-3fe83d2db2c4?auto=format&fit=crop&w=1800&h=1000&q=80' },
+  tailoring: { name: 'Signature Tailoring', story: 'Half-canvas construction and natural shoulders, cut for men and women who dress for the room, not the trend.', img: 'https://images.unsplash.com/photo-1607702705816-81497b0a9009?auto=format&fit=crop&w=1800&h=1000&q=80' }
 };
 document.addEventListener('DOMContentLoaded', async () => {
   const key = new URLSearchParams(location.search).get('c') || 'chateau';
