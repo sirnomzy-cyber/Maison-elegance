@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A New Chapter Is Arriving — Maison Élégance</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/typography.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/utilities.css">
+<style>
+  body { background: var(--color-black); }
+  .coming-soon { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; }
+  .coming-soon img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.35; }
+  .coming-soon__content { position: relative; z-index: 2; padding: var(--sp-4); }
+</style>
+</head>
+<body>
+<div class="coming-soon">
+  <img src="https://images.unsplash.com/photo-1642174916136-e7d9247ffa1e?auto=format&fit=crop&w=1800&h=1000&q=80" alt="">
+  <div class="coming-soon__content">
+    <p class="eyebrow" style="color:var(--color-gold-soft);">Maison Élégance</p>
+    <h1 class="text-white mt-2">A New Chapter Is Arriving</h1>
+    <div class="countdown mt-6">
+      <div class="countdown__unit"><span class="countdown__num text-white" id="cs-days">14</span><span class="countdown__label" style="color:rgba(255,255,255,0.7);">Days</span></div>
+      <div class="countdown__unit"><span class="countdown__num text-white" id="cs-hours">08</span><span class="countdown__label" style="color:rgba(255,255,255,0.7);">Hours</span></div>
+      <div class="countdown__unit"><span class="countdown__num text-white" id="cs-mins">42</span><span class="countdown__label" style="color:rgba(255,255,255,0.7);">Minutes</span></div>
+      <div class="countdown__unit"><span class="countdown__num text-white" id="cs-secs">17</span><span class="countdown__label" style="color:rgba(255,255,255,0.7);">Seconds</span></div>
+    </div>
+    <form class="newsletter-form mt-6" data-validate style="max-width:420px;">
+      <div class="field" style="flex:1; margin:0;"><input type="email" required placeholder="Your email address" style="background:rgba(255,255,255,0.08); border-color:rgba(255,255,255,0.25); color:#fff;"></div>
+      <button type="submit" class="btn btn-ghost-light">Notify Me</button>
+    </form>
+    <div class="footer-social mt-6" style="justify-content:center; display:flex;">
+      <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" width="20" fill="none" stroke="#fff" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg></a>
+    </div>
+  </div>
+</div>
+<script src="js/forms.js"></script>
+<script>
+(function () {
+  const end = new Date(); end.setDate(end.getDate() + 14); end.setHours(end.getHours()+8, end.getMinutes()+42, end.getSeconds()+17);
+  function tick() {
+    const diff = Math.max(0, end - new Date());
+    document.getElementById('cs-days').textContent = String(Math.floor(diff/86400000)).padStart(2,'0');
+    document.getElementById('cs-hours').textContent = String(Math.floor((diff%86400000)/3600000)).padStart(2,'0');
+    document.getElementById('cs-mins').textContent = String(Math.floor((diff%3600000)/60000)).padStart(2,'0');
+    document.getElementById('cs-secs').textContent = String(Math.floor((diff%60000)/1000)).padStart(2,'0');
+  }
+  tick(); setInterval(tick, 1000);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+.mt-1{margin-top:var(--sp-1)} .mt-2{margin-top:var(--sp-2)} .mt-3{margin-top:var(--sp-3)} .mt-4{margin-top:var(--sp-4)} .mt-6{margin-top:var(--sp-6)}
+.mb-1{margin-bottom:var(--sp-1)} .mb-2{margin-bottom:var(--sp-2)} .mb-3{margin-bottom:var(--sp-3)} .mb-4{margin-bottom:var(--sp-4)} .mb-6{margin-bottom:var(--sp-6)}
+.text-white { color: #fff; }
+.bg-alt { background: var(--color-bg-alt); }
+.bg-black { background: var(--color-black); color: #fff; }
+.rounded-img { border-radius: var(--radius-img); overflow: hidden; }
+.w-full { width: 100%; }
+.gap-2 { gap: var(--sp-2); }

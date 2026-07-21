@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="pageTitle">Collection — Maison Élégance</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/typography.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/utilities.css">
+<link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+<div class="announcement-bar">Complimentary Worldwide Shipping — New Season Collection Now Available</div>
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">Maison Élégance</a>
+    <nav class="nav-links" aria-label="Primary"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="collections.html">Collections</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+    <div class="nav-actions">
+      <button class="icon-btn" aria-label="Open shopping bag" data-cart-toggle><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 016 0v2"/></svg><span class="badge-count" data-cart-count style="display:none;">0</span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero" style="height:56vh;">
+    <img id="heroImg" src="https://images.unsplash.com/photo-1642174916136-e7d9247ffa1e?auto=format&fit=crop&w=1800&h=1000&q=80" alt="">
+    <div class="page-hero__content">
+      <p class="eyebrow" style="color:var(--color-gold-soft);">Featured Collection</p>
+      <h1 id="collectionName">The Château Collection</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="content" style="max-width:800px; margin:0 auto; text-align:center;">
+      <p class="lede" id="collectionStory" style="margin:0 auto;">A study in restraint — silk, calfskin, and pearl, photographed at dusk in the Loire Valley. Nine pieces, each designed to be worn for decades, not seasons.</p>
+    </div>
+  </section>
+
+  <section class="section bg-alt">
+    <div class="content">
+      <div class="section-head"><div><p class="eyebrow">Featured In This Collection</p><h2 id="collectionHeading">Château Collection Pieces</h2></div></div>
+      <div class="grid grid-4" data-product-grid="collection-products"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="content">
+      <div class="section-head"><div><p class="eyebrow">Client Notes</p><h2>What They're Saying</h2></div></div>
+      <div class="grid grid-3">
+        <div class="testimonial-card"><div class="testimonial-card__stars">★★★★★</div><p class="testimonial-card__quote">"Every piece from this line photographs beautifully and wears even better."</p></div>
+        <div class="testimonial-card"><div class="testimonial-card__stars">★★★★★</div><p class="testimonial-card__quote">"The kind of investment pieces you actually reach for weekly."</p></div>
+        <div class="testimonial-card"><div class="testimonial-card__stars">★★★★★</div><p class="testimonial-card__quote">"Understated in the best possible way."</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-alt">
+    <div class="content">
+      <div class="section-head"><div><p class="eyebrow">Continue Exploring</p><h2>Related Collections</h2></div></div>
+      <div class="grid grid-3">
+        <a href="collections.html" class="category-card"><img src="https://images.unsplash.com/photo-1616244916660-d135a013d1f8?auto=format&fit=crop&w=700&h=500&q=80" alt=""><div class="category-card__overlay"><span class="category-card__label">Winter Editorial</span></div></a>
+        <a href="collections.html" class="category-card"><img src="https://images.unsplash.com/photo-1453396450673-3fe83d2db2c4?auto=format&fit=crop&w=700&h=500&q=80" alt=""><div class="category-card__overlay"><span class="category-card__label">Signature Tailoring</span></div></a>
+        <a href="collections.html" class="category-card"><img src="https://images.unsplash.com/photo-1576110598658-096ae24cdb97?auto=format&fit=crop&w=700&h=500&q=80" alt=""><div class="category-card__overlay"><span class="category-card__label">Essentials</span></div></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-logo">Maison Élégance</div>
+        <p>Timeless luxury, modern expression. Crafted for those who wear confidence.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M15 8h2V4h-2a4 4 0 00-4 4v3H9v4h2v7h4v-7h3l1-4h-4V8a1 1 0 011-1z"/></svg></a>
+          <a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M9 17c1-3 1.5-6 1.5-8a2.5 2.5 0 015 0c0 2-1 4-1 5.5a2 2 0 004 0"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <a href="shop.html?category=women">Women</a>
+        <a href="shop.html?category=men">Men</a>
+        <a href="shop.html?category=bags">Handbags</a>
+        <a href="shop.html?category=shoes">Shoes</a>
+        <a href="shop.html?category=accessories">Accessories</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="craftsmanship.html">Craftsmanship</a>
+        <a href="sustainability.html">Sustainability</a>
+        <a href="careers.html">Careers</a>
+        <a href="journal.html">Journal</a>
+      </div>
+      <div class="footer-col">
+        <h4>Customer Care</h4>
+        <a href="contact.html">Contact Us</a>
+        <a href="faq.html">FAQs</a>
+        <a href="size-guide.html">Size Guide</a>
+        <a href="shipping-returns.html">Shipping &amp; Returns</a>
+        <a href="track-order.html">Track Order</a>
+        <a href="store-locations.html">Store Locations</a>
+      </div>
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <p>Sign up for early access to new collections and private sales.</p>
+        <form class="field" data-validate style="display:flex; gap:8px; margin:0;">
+          <label for="footer-email" class="visually-hidden">Email address</label>
+          <input type="email" id="footer-email" required placeholder="Email address" style="background:transparent; border-color:rgba(255,255,255,0.25); color:#fff;">
+          <button class="btn btn-primary btn-sm" type="submit">Join</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Maison Élégance. All rights reserved.</span>
+      <div class="flex gap-2">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <a href="gift-cards.html">Gift Cards</a>
+      </div>
+      <div class="payment-icons">
+        <span>Visa</span><span>Mastercard</span><span>Amex</span><span>Apple Pay</span><span>PayPal</span>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="drawer-overlay" data-drawer-overlay></div>
+<aside class="drawer" data-cart-drawer aria-label="Shopping bag">
+  <div class="drawer__header"><h3>Your Bag</h3><button aria-label="Close bag" data-cart-close>✕</button></div>
+  <div class="drawer__body" data-cart-body></div>
+  <div class="drawer__footer"><a href="checkout.html" class="btn btn-primary btn-block">Checkout</a></div>
+</aside>
+<script src="js/cart.js"></script>
+<script src="js/wishlist.js"></script>
+<script src="js/products-data.js"></script>
+<script src="js/products.js"></script>
+<script>
+const collectionData = {
+  chateau: { name: 'The Château Collection', story: 'A study in restraint — silk, calfskin, and pearl, photographed at dusk in the Loire Valley. Nine pieces, each designed to be worn for decades, not seasons.', img: 'https://images.unsplash.com/photo-1642174916136-e7d9247ffa1e?auto=format&fit=crop&w=1800&h=1000&q=80' },
+  winter: { name: 'Winter Editorial', story: 'Structured outerwear and hand-finished leather boots, built for cold-weather cities without sacrificing line.', img: 'https://images.unsplash.com/photo-1616244916660-d135a013d1f8?auto=format&fit=crop&w=1800&h=1000&q=80' },
+  essentials: { name: 'Essentials', story: 'The foundation pieces every wardrobe returns to — merino knitwear, quilted leather, and clean tailoring staples.', img: 'https://images.unsplash.com/photo-1576110598658-096ae24cdb97?auto=format&fit=crop&w=1800&h=1000&q=80' },
+  tailoring: { name: 'Signature Tailoring', story: 'Half-canvas construction and natural shoulders, cut for men and women who dress for the room, not the trend.', img: 'https://images.unsplash.com/photo-1453396450673-3fe83d2db2c4?auto=format&fit=crop&w=1800&h=1000&q=80' }
+};
+document.addEventListener('DOMContentLoaded', async () => {
+  const key = new URLSearchParams(location.search).get('c') || 'chateau';
+  const c = collectionData[key] || collectionData.chateau;
+  document.getElementById('pageTitle').textContent = c.name + ' — Maison Élégance';
+  document.getElementById('collectionName').textContent = c.name;
+  document.getElementById('collectionHeading').textContent = c.name + ' Pieces';
+  document.getElementById('collectionStory').textContent = c.story;
+  document.getElementById('heroImg').src = c.img;
+
+  const products = await loadProducts();
+  const matches = products.filter(p => p.collection.toLowerCase().includes(c.name.replace('The ','').split(' ')[0].toLowerCase()));
+  renderProductGrid(matches.length ? matches : products.slice(0,4), '[data-product-grid="collection-products"]');
+});
+</script>
+</body>
+</html>

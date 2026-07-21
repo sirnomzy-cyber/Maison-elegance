@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout — Maison Élégance</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/typography.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/utilities.css">
+<link rel="stylesheet" href="css/pages.css">
+<style>
+  .checkout-steps { display:flex; gap:var(--sp-4); margin-bottom:var(--sp-6); flex-wrap:wrap; }
+  .checkout-step { display:flex; align-items:center; gap:8px; font-size:var(--fs-small); color:var(--color-text); }
+  .checkout-step__num { width:26px; height:26px; border-radius:50%; border:1px solid var(--color-border); display:flex; align-items:center; justify-content:center; font-size:var(--fs-caption); }
+  .checkout-step.is-active { color:var(--color-black); font-weight:600; }
+  .checkout-step.is-active .checkout-step__num { background:var(--color-black); color:#fff; border-color:var(--color-black); }
+  .checkout-step.is-done .checkout-step__num { background:var(--color-gold); color:var(--color-black); border-color:var(--color-gold); }
+  .checkout-panel { display:none; }
+  .checkout-panel.is-active { display:block; }
+  .payment-methods { display:flex; gap:var(--sp-2); flex-wrap:wrap; margin-bottom:var(--sp-3); }
+  .payment-methods label { border:1px solid var(--color-border); border-radius:var(--radius-input); padding:12px 18px; font-size:var(--fs-small); cursor:pointer; }
+  .payment-methods input { margin-right:6px; }
+  .payment-methods label:has(input:checked) { border-color:var(--color-black); background:var(--color-bg-alt); }
+</style>
+</head>
+<body>
+<div class="announcement-bar">Complimentary Worldwide Shipping — New Season Collection Now Available</div>
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">Maison Élégance</a>
+    <span style="font-size:var(--fs-small); color:var(--color-text);">Secure Checkout</span>
+  </div>
+</header>
+
+<main>
+  <div class="content section-tight">
+    <div class="checkout-steps">
+      <div class="checkout-step is-active" data-step-indicator="1"><span class="checkout-step__num">1</span> Information</div>
+      <div class="checkout-step" data-step-indicator="2"><span class="checkout-step__num">2</span> Shipping</div>
+      <div class="checkout-step" data-step-indicator="3"><span class="checkout-step__num">3</span> Payment</div>
+      <div class="checkout-step" data-step-indicator="4"><span class="checkout-step__num">4</span> Review</div>
+    </div>
+
+    <div class="cart-layout">
+      <div>
+        <!-- STEP 1: Customer Info + Shipping Address -->
+        <form class="checkout-panel is-active" data-panel="1" data-validate>
+          <h2 class="mb-4">Contact &amp; Shipping</h2>
+          <div class="field"><label for="email">Email <span class="required">*</span></label><input type="email" id="email" required></div>
+          <label class="filter-option mb-3"><input type="checkbox" checked> Email me with news and offers</label>
+          <div class="grid grid-2">
+            <div class="field"><label for="fname">First Name <span class="required">*</span></label><input type="text" id="fname" required></div>
+            <div class="field"><label for="lname">Last Name <span class="required">*</span></label><input type="text" id="lname" required></div>
+          </div>
+          <div class="field"><label for="address">Address <span class="required">*</span></label><input type="text" id="address" required></div>
+          <div class="grid grid-3">
+            <div class="field"><label for="city">City <span class="required">*</span></label><input type="text" id="city" required></div>
+            <div class="field"><label for="zip">Postal Code <span class="required">*</span></label><input type="text" id="zip" required></div>
+            <div class="field"><label for="country">Country <span class="required">*</span></label>
+              <select id="country" required><option>United States</option><option>United Kingdom</option><option>France</option><option>Nigeria</option><option>United Arab Emirates</option></select>
+            </div>
+          </div>
+          <div class="field"><label for="phone">Phone</label><input type="tel" id="phone"></div>
+          <button type="button" class="btn btn-primary mt-2" data-next="2">Continue to Shipping</button>
+        </form>
+
+        <!-- STEP 2: Delivery Method -->
+        <div class="checkout-panel" data-panel="2">
+          <h2 class="mb-4">Delivery Method</h2>
+          <div class="field">
+            <label class="filter-option mb-2" style="border:1px solid var(--color-border); border-radius:var(--radius-input); padding:14px;"><input type="radio" name="delivery" checked> Standard — Complimentary (5–8 business days)</label>
+            <label class="filter-option mb-2" style="border:1px solid var(--color-border); border-radius:var(--radius-input); padding:14px;"><input type="radio" name="delivery"> Express — $35 (2–3 business days)</label>
+            <label class="filter-option" style="border:1px solid var(--color-border); border-radius:var(--radius-input); padding:14px;"><input type="radio" name="delivery"> Boutique Pickup — Complimentary (select locations)</label>
+          </div>
+          <div class="field mt-3"><label for="giftMsg">Gift Message (optional)</label><textarea id="giftMsg" rows="3"></textarea></div>
+          <label class="filter-option mb-3"><input type="checkbox"> Include luxury gift wrapping</label>
+          <div class="flex gap-2">
+            <button type="button" class="btn btn-secondary" data-prev="1">Back</button>
+            <button type="button" class="btn btn-primary" data-next="3">Continue to Payment</button>
+          </div>
+        </div>
+
+        <!-- STEP 3: Payment -->
+        <form class="checkout-panel" data-panel="3" data-validate>
+          <h2 class="mb-4">Payment</h2>
+          <div class="payment-methods">
+            <label><input type="radio" name="pay" checked> Visa / Mastercard / Amex</label>
+            <label><input type="radio" name="pay"> Apple Pay</label>
+            <label><input type="radio" name="pay"> Google Pay</label>
+            <label><input type="radio" name="pay"> PayPal</label>
+          </div>
+          <div class="field"><label for="cardNum">Card Number <span class="required">*</span></label><input type="text" id="cardNum" placeholder="•••• •••• •••• ••••" required></div>
+          <div class="grid grid-2">
+            <div class="field"><label for="cardExp">Expiry <span class="required">*</span></label><input type="text" id="cardExp" placeholder="MM / YY" required></div>
+            <div class="field"><label for="cardCvc">CVC <span class="required">*</span></label><input type="text" id="cardCvc" required></div>
+          </div>
+          <div class="field"><label for="orderNotes">Order Notes (optional)</label><textarea id="orderNotes" rows="2"></textarea></div>
+          <div class="flex gap-2">
+            <button type="button" class="btn btn-secondary" data-prev="2">Back</button>
+            <button type="button" class="btn btn-primary" data-next="4">Review Order</button>
+          </div>
+        </form>
+
+        <!-- STEP 4: Review -->
+        <div class="checkout-panel" data-panel="4">
+          <h2 class="mb-4">Review Your Order</h2>
+          <p class="mb-3">Please confirm your details are correct before placing your order.</p>
+          <div class="flex gap-2">
+            <button type="button" class="btn btn-secondary" data-prev="3">Back</button>
+            <button type="button" class="btn btn-primary" id="placeOrderBtn">Place Order</button>
+          </div>
+        </div>
+      </div>
+
+      <aside class="card">
+        <h3 class="mb-3">Order Summary</h3>
+        <div id="checkoutLines"></div>
+        <hr style="border-color:var(--color-line); margin:var(--sp-2) 0;">
+        <div class="flex-between mb-2"><span>Subtotal</span><span id="ckSubtotal">$0</span></div>
+        <div class="flex-between mb-2"><span>Shipping</span><span>Complimentary</span></div>
+        <div class="flex-between mb-3"><span>Tax</span><span id="ckTax">$0</span></div>
+        <div class="flex-between"><strong>Total</strong><strong class="price" id="ckTotal">$0</strong></div>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-logo">Maison Élégance</div>
+        <p>Timeless luxury, modern expression. Crafted for those who wear confidence.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M15 8h2V4h-2a4 4 0 00-4 4v3H9v4h2v7h4v-7h3l1-4h-4V8a1 1 0 011-1z"/></svg></a>
+          <a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M9 17c1-3 1.5-6 1.5-8a2.5 2.5 0 015 0c0 2-1 4-1 5.5a2 2 0 004 0"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <a href="shop.html?category=women">Women</a>
+        <a href="shop.html?category=men">Men</a>
+        <a href="shop.html?category=bags">Handbags</a>
+        <a href="shop.html?category=shoes">Shoes</a>
+        <a href="shop.html?category=accessories">Accessories</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="craftsmanship.html">Craftsmanship</a>
+        <a href="sustainability.html">Sustainability</a>
+        <a href="careers.html">Careers</a>
+        <a href="journal.html">Journal</a>
+      </div>
+      <div class="footer-col">
+        <h4>Customer Care</h4>
+        <a href="contact.html">Contact Us</a>
+        <a href="faq.html">FAQs</a>
+        <a href="size-guide.html">Size Guide</a>
+        <a href="shipping-returns.html">Shipping &amp; Returns</a>
+        <a href="track-order.html">Track Order</a>
+        <a href="store-locations.html">Store Locations</a>
+      </div>
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <p>Sign up for early access to new collections and private sales.</p>
+        <form class="field" data-validate style="display:flex; gap:8px; margin:0;">
+          <label for="footer-email" class="visually-hidden">Email address</label>
+          <input type="email" id="footer-email" required placeholder="Email address" style="background:transparent; border-color:rgba(255,255,255,0.25); color:#fff;">
+          <button class="btn btn-primary btn-sm" type="submit">Join</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Maison Élégance. All rights reserved.</span>
+      <div class="flex gap-2">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <a href="gift-cards.html">Gift Cards</a>
+      </div>
+      <div class="payment-icons">
+        <span>Visa</span><span>Mastercard</span><span>Amex</span><span>Apple Pay</span><span>PayPal</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/cart.js"></script>
+<script src="js/forms.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const cart = getCart();
+  document.getElementById('checkoutLines').innerHTML = cart.map(c => `
+    <div class="flex-between mb-2" style="font-size:var(--fs-small);">
+      <span>${c.name} × ${c.qty}</span><span>$${(c.price*c.qty).toLocaleString()}</span>
+    </div>`).join('') || '<p style="font-size:var(--fs-small);">Your bag is empty.</p>';
+  const subtotal = cartTotal();
+  const tax = subtotal * 0.08;
+  document.getElementById('ckSubtotal').textContent = `$${subtotal.toLocaleString(undefined,{minimumFractionDigits:2})}`;
+  document.getElementById('ckTax').textContent = `$${tax.toLocaleString(undefined,{minimumFractionDigits:2})}`;
+  document.getElementById('ckTotal').textContent = `$${(subtotal+tax).toLocaleString(undefined,{minimumFractionDigits:2})}`;
+
+  function goToStep(step) {
+    document.querySelectorAll('.checkout-panel').forEach(p => p.classList.toggle('is-active', p.dataset.panel === String(step)));
+    document.querySelectorAll('[data-step-indicator]').forEach(s => {
+      const n = Number(s.dataset.stepIndicator);
+      s.classList.toggle('is-active', n === step);
+      s.classList.toggle('is-done', n < step);
+    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  document.querySelectorAll('[data-next]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const form = btn.closest('form');
+      if (form) {
+        let valid = true;
+        form.querySelectorAll('[required]').forEach(input => {
+          const field = input.closest('.field');
+          const ok = input.value.trim().length > 0;
+          field.classList.toggle('has-error', !ok);
+          if (!ok) valid = false;
+        });
+        if (!valid) return;
+      }
+      goToStep(Number(btn.dataset.next));
+    });
+  });
+  document.querySelectorAll('[data-prev]').forEach(btn => btn.addEventListener('click', () => goToStep(Number(btn.dataset.prev))));
+
+  document.getElementById('placeOrderBtn').addEventListener('click', () => {
+    const orderNum = 'ME' + Math.floor(100000 + Math.random() * 900000);
+    localStorage.setItem('maison_last_order', JSON.stringify({ orderNum, total: subtotal + tax, items: cart }));
+    localStorage.removeItem('maison_cart');
+    window.location.href = 'order-confirmation.html';
+  });
+});
+</script>
+</body>
+</html>

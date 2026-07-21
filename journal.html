@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Journal — Maison Élégance</title>
+<meta name="description" content="Stories on craftsmanship, style, and the world of Maison Élégance.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/typography.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/utilities.css">
+<link rel="stylesheet" href="css/pages.css">
+<style>
+  .journal-card img { aspect-ratio:4/3; object-fit:cover; width:100%; border-radius:var(--radius-img); margin-bottom:var(--sp-2); }
+  .journal-meta { font-size:var(--fs-caption); color:var(--color-text); text-transform:uppercase; letter-spacing:.04em; }
+  .journal-filters { display:flex; gap:var(--sp-2); flex-wrap:wrap; margin-bottom:var(--sp-6); }
+  .journal-filters button { padding:8px 18px; border:1px solid var(--color-border); border-radius:var(--radius-btn); font-size:var(--fs-small); }
+  .journal-filters button.is-active { background:var(--color-black); color:#fff; border-color:var(--color-black); }
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">Maison Élégance</a>
+    <nav class="nav-links" aria-label="Primary"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="journal.html" aria-current="page">Journal</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <img src="https://images.unsplash.com/photo-1728318817167-902a85482317?auto=format&fit=crop&w=1800&h=900&q=80" alt="Maison Élégance Journal">
+    <div class="page-hero__content">
+      <p class="eyebrow" style="color:var(--color-gold-soft);">The Journal</p>
+      <h1>Stories From the Maison</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="content">
+      <div class="journal-filters">
+        <button class="is-active">All</button><button>Fashion</button><button>Style Guides</button><button>Craftsmanship</button><button>Behind the Scenes</button><button>Travel</button><button>Seasonal Trends</button>
+      </div>
+
+      <div class="grid grid-3">
+        <a href="blog.html?post=capsule-wardrobe" class="journal-card reveal">
+          <img src="https://images.unsplash.com/photo-1728318817167-902a85482317?auto=format&fit=crop&w=700&h=525&q=80" alt="">
+          <p class="journal-meta">Style Guides · 6 min read</p>
+          <h3 style="font-size:1.1rem; margin-top:6px;">Building a Ten-Piece Capsule Wardrobe</h3>
+        </a>
+        <a href="blog.html?post=atelier-visit" class="journal-card reveal delay-1">
+          <img src="https://images.unsplash.com/photo-1453396450673-3fe83d2db2c4?auto=format&fit=crop&w=700&h=525&q=80" alt="">
+          <p class="journal-meta">Behind the Scenes · 8 min read</p>
+          <h3 style="font-size:1.1rem; margin-top:6px;">Inside Our Biella Wool Mill</h3>
+        </a>
+        <a href="blog.html?post=autumn-palette" class="journal-card reveal delay-2">
+          <img src="https://images.unsplash.com/photo-1642174916136-e7d9247ffa1e?auto=format&fit=crop&w=700&h=525&q=80" alt="">
+          <p class="journal-meta">Seasonal Trends · 5 min read</p>
+          <h3 style="font-size:1.1rem; margin-top:6px;">This Season's Quiet Palette</h3>
+        </a>
+        <a href="blog.html?post=leather-care" class="journal-card reveal">
+          <img src="https://images.unsplash.com/photo-1616244916660-d135a013d1f8?auto=format&fit=crop&w=700&h=525&q=80" alt="">
+          <p class="journal-meta">Craftsmanship · 4 min read</p>
+          <h3 style="font-size:1.1rem; margin-top:6px;">The Right Way to Care for Leather</h3>
+        </a>
+        <a href="blog.html?post=loire-valley" class="journal-card reveal delay-1">
+          <img src="https://images.unsplash.com/photo-1728318817287-20d223d60086?auto=format&fit=crop&w=700&h=525&q=80" alt="">
+          <p class="journal-meta">Travel · 7 min read</p>
+          <h3 style="font-size:1.1rem; margin-top:6px;">A Weekend in the Loire Valley</h3>
+        </a>
+        <a href="blog.html?post=tailoring-101" class="journal-card reveal delay-2">
+          <img src="https://images.unsplash.com/photo-1453396450673-3fe83d2db2c4?auto=format&fit=crop&w=700&h=525&q=80" alt="">
+          <p class="journal-meta">Fashion · 6 min read</p>
+          <h3 style="font-size:1.1rem; margin-top:6px;">What Half-Canvas Construction Actually Means</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-alt">
+    <div class="content">
+      <div class="newsletter reveal">
+        <p class="eyebrow">Never Miss a Story</p>
+        <h2 class="mt-1">Journal Newsletter</h2>
+        <form class="newsletter-form" data-validate data-success-message="You're subscribed to the Journal.">
+          <div class="field" style="flex:1; margin:0;"><input type="email" required placeholder="Your email address"></div>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-logo">Maison Élégance</div>
+        <p>Timeless luxury, modern expression. Crafted for those who wear confidence.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M15 8h2V4h-2a4 4 0 00-4 4v3H9v4h2v7h4v-7h3l1-4h-4V8a1 1 0 011-1z"/></svg></a>
+          <a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M9 17c1-3 1.5-6 1.5-8a2.5 2.5 0 015 0c0 2-1 4-1 5.5a2 2 0 004 0"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <a href="shop.html?category=women">Women</a>
+        <a href="shop.html?category=men">Men</a>
+        <a href="shop.html?category=bags">Handbags</a>
+        <a href="shop.html?category=shoes">Shoes</a>
+        <a href="shop.html?category=accessories">Accessories</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="craftsmanship.html">Craftsmanship</a>
+        <a href="sustainability.html">Sustainability</a>
+        <a href="careers.html">Careers</a>
+        <a href="journal.html">Journal</a>
+      </div>
+      <div class="footer-col">
+        <h4>Customer Care</h4>
+        <a href="contact.html">Contact Us</a>
+        <a href="faq.html">FAQs</a>
+        <a href="size-guide.html">Size Guide</a>
+        <a href="shipping-returns.html">Shipping &amp; Returns</a>
+        <a href="track-order.html">Track Order</a>
+        <a href="store-locations.html">Store Locations</a>
+      </div>
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <p>Sign up for early access to new collections and private sales.</p>
+        <form class="field" data-validate style="display:flex; gap:8px; margin:0;">
+          <label for="footer-email" class="visually-hidden">Email address</label>
+          <input type="email" id="footer-email" required placeholder="Email address" style="background:transparent; border-color:rgba(255,255,255,0.25); color:#fff;">
+          <button class="btn btn-primary btn-sm" type="submit">Join</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Maison Élégance. All rights reserved.</span>
+      <div class="flex gap-2">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <a href="gift-cards.html">Gift Cards</a>
+      </div>
+      <div class="payment-icons">
+        <span>Visa</span><span>Mastercard</span><span>Amex</span><span>Apple Pay</span><span>PayPal</span>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+<script src="js/forms.js"></script>
+<script>
+document.querySelectorAll('.journal-filters button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.journal-filters button').forEach(b => b.classList.remove('is-active'));
+    btn.classList.add('is-active');
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lookbook — Maison Élégance</title>
+<meta name="description" content="Editorial campaign photography from Maison Élégance's seasonal lookbooks.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/typography.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/utilities.css">
+<link rel="stylesheet" href="css/pages.css">
+<style>
+  .lookbook-grid { columns: 3 280px; gap: var(--sp-2); }
+  .lookbook-item { break-inside: avoid; margin-bottom: var(--sp-2); border-radius: var(--radius-img); overflow: hidden; }
+  .lookbook-item img { width: 100%; display: block; transition: transform var(--dur-slow) var(--ease); }
+  .lookbook-item:hover img { transform: scale(1.03); }
+  @media (max-width: 768px) { .lookbook-grid { columns: 2 160px; } }
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">Maison Élégance</a>
+    <nav class="nav-links" aria-label="Primary"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="lookbook.html" aria-current="page">Lookbook</a><a href="contact.html">Contact</a></nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <img src="https://images.unsplash.com/photo-1642174916136-e7d9247ffa1e?auto=format&fit=crop&w=1800&h=900&q=80" alt="Maison Élégance seasonal lookbook">
+    <div class="page-hero__content">
+      <p class="eyebrow" style="color:var(--color-gold-soft);">Editorial</p>
+      <h1>Lookbook</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="content">
+      <div class="journal-filters flex gap-2 mb-6" style="flex-wrap:wrap;">
+        <button class="btn btn-secondary btn-sm">All Seasons</button>
+        <button class="btn btn-secondary btn-sm">Spring / Summer</button>
+        <button class="btn btn-secondary btn-sm">Autumn / Winter</button>
+        <button class="btn btn-secondary btn-sm">Château Collection</button>
+        <button class="btn btn-secondary btn-sm">Signature Tailoring</button>
+      </div>
+      <div class="lookbook-grid">
+        <a href="#" class="lookbook-item"><img src="https://images.unsplash.com/photo-1728318817287-20d223d60086?auto=format&fit=crop&w=700&h=900&q=80" alt=""></a>
+        <a href="#" class="lookbook-item"><img src="https://images.unsplash.com/photo-1607702705816-81497b0a9009?auto=format&fit=crop&w=700&h=500&q=80" alt=""></a>
+        <a href="#" class="lookbook-item"><img src="https://images.unsplash.com/photo-1702865053958-71ec751c4118?auto=format&fit=crop&w=700&h=1000&q=80" alt=""></a>
+        <a href="#" class="lookbook-item"><img src="https://images.unsplash.com/photo-1616244916660-d135a013d1f8?auto=format&fit=crop&w=700&h=700&q=80" alt=""></a>
+        <a href="#" class="lookbook-item"><img src="https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?auto=format&fit=crop&w=700&h=900&q=80" alt=""></a>
+        <a href="#" class="lookbook-item"><img src="https://images.unsplash.com/photo-1453396450673-3fe83d2db2c4?auto=format&fit=crop&w=700&h=500&q=80" alt=""></a>
+        <a href="#" class="lookbook-item"><img src="https://images.unsplash.com/photo-1576110598658-096ae24cdb97?auto=format&fit=crop&w=700&h=850&q=80" alt=""></a>
+        <a href="#" class="lookbook-item"><img src="https://images.unsplash.com/photo-1474585628895-4579822e21a8?auto=format&fit=crop&w=700&h=600&q=80" alt=""></a>
+        <a href="#" class="lookbook-item"><img src="https://images.unsplash.com/photo-1728318817167-902a85482317?auto=format&fit=crop&w=700&h=950&q=80" alt=""></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-logo">Maison Élégance</div>
+        <p>Timeless luxury, modern expression. Crafted for those who wear confidence.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M15 8h2V4h-2a4 4 0 00-4 4v3H9v4h2v7h4v-7h3l1-4h-4V8a1 1 0 011-1z"/></svg></a>
+          <a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M9 17c1-3 1.5-6 1.5-8a2.5 2.5 0 015 0c0 2-1 4-1 5.5a2 2 0 004 0"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <a href="shop.html?category=women">Women</a>
+        <a href="shop.html?category=men">Men</a>
+        <a href="shop.html?category=bags">Handbags</a>
+        <a href="shop.html?category=shoes">Shoes</a>
+        <a href="shop.html?category=accessories">Accessories</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="craftsmanship.html">Craftsmanship</a>
+        <a href="sustainability.html">Sustainability</a>
+        <a href="careers.html">Careers</a>
+        <a href="journal.html">Journal</a>
+      </div>
+      <div class="footer-col">
+        <h4>Customer Care</h4>
+        <a href="contact.html">Contact Us</a>
+        <a href="faq.html">FAQs</a>
+        <a href="size-guide.html">Size Guide</a>
+        <a href="shipping-returns.html">Shipping &amp; Returns</a>
+        <a href="track-order.html">Track Order</a>
+        <a href="store-locations.html">Store Locations</a>
+      </div>
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <p>Sign up for early access to new collections and private sales.</p>
+        <form class="field" data-validate style="display:flex; gap:8px; margin:0;">
+          <label for="footer-email" class="visually-hidden">Email address</label>
+          <input type="email" id="footer-email" required placeholder="Email address" style="background:transparent; border-color:rgba(255,255,255,0.25); color:#fff;">
+          <button class="btn btn-primary btn-sm" type="submit">Join</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Maison Élégance. All rights reserved.</span>
+      <div class="flex gap-2">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <a href="gift-cards.html">Gift Cards</a>
+      </div>
+      <div class="payment-icons">
+        <span>Visa</span><span>Mastercard</span><span>Amex</span><span>Apple Pay</span><span>PayPal</span>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

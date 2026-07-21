@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search — Maison Élégance</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/typography.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/utilities.css">
+<link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">Maison Élégance</a>
+    <nav class="nav-links" aria-label="Primary"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="collections.html">Collections</a><a href="contact.html">Contact</a></nav>
+    <div class="nav-actions">
+      <button class="icon-btn" aria-label="Open shopping bag" data-cart-toggle><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 016 0v2"/></svg><span class="badge-count" data-cart-count style="display:none;">0</span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="content section-tight">
+    <div style="max-width:640px; margin:0 auto var(--sp-6);">
+      <div class="field" style="margin:0;">
+        <label for="searchInput" class="visually-hidden">Search products</label>
+        <input type="search" id="searchInput" placeholder="Search products, collections, categories…" style="font-size:1.1rem; padding:18px 22px;" autofocus>
+      </div>
+      <div class="flex gap-2 mt-3" style="flex-wrap:wrap;">
+        <span style="font-size:var(--fs-caption); color:var(--color-text); text-transform:uppercase; letter-spacing:.04em;">Popular:</span>
+        <button class="badge" style="cursor:pointer;" data-suggest="Handbags">Handbags</button>
+        <button class="badge" style="cursor:pointer;" data-suggest="Coat">Coats</button>
+        <button class="badge" style="cursor:pointer;" data-suggest="Watch">Watches</button>
+        <button class="badge" style="cursor:pointer;" data-suggest="Silk">Silk</button>
+      </div>
+    </div>
+
+    <p id="searchResultCount" class="text-center mb-4" style="color:var(--color-text);"></p>
+    <div class="grid grid-4" id="searchResults"></div>
+    <div id="noResultsBlock" style="display:none; text-align:center; padding:var(--sp-8) 0;">
+      <p class="lede" style="margin:0 auto;">No results found. Try a different search term.</p>
+      <div class="section-head mt-6"><div><p class="eyebrow">You May Also Like</p><h2>Trending Now</h2></div></div>
+      <div class="grid grid-4" id="trendingFallback"></div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-logo">Maison Élégance</div>
+        <p>Timeless luxury, modern expression. Crafted for those who wear confidence.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M15 8h2V4h-2a4 4 0 00-4 4v3H9v4h2v7h4v-7h3l1-4h-4V8a1 1 0 011-1z"/></svg></a>
+          <a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M9 17c1-3 1.5-6 1.5-8a2.5 2.5 0 015 0c0 2-1 4-1 5.5a2 2 0 004 0"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <a href="shop.html?category=women">Women</a>
+        <a href="shop.html?category=men">Men</a>
+        <a href="shop.html?category=bags">Handbags</a>
+        <a href="shop.html?category=shoes">Shoes</a>
+        <a href="shop.html?category=accessories">Accessories</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="craftsmanship.html">Craftsmanship</a>
+        <a href="sustainability.html">Sustainability</a>
+        <a href="careers.html">Careers</a>
+        <a href="journal.html">Journal</a>
+      </div>
+      <div class="footer-col">
+        <h4>Customer Care</h4>
+        <a href="contact.html">Contact Us</a>
+        <a href="faq.html">FAQs</a>
+        <a href="size-guide.html">Size Guide</a>
+        <a href="shipping-returns.html">Shipping &amp; Returns</a>
+        <a href="track-order.html">Track Order</a>
+        <a href="store-locations.html">Store Locations</a>
+      </div>
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <p>Sign up for early access to new collections and private sales.</p>
+        <form class="field" data-validate style="display:flex; gap:8px; margin:0;">
+          <label for="footer-email" class="visually-hidden">Email address</label>
+          <input type="email" id="footer-email" required placeholder="Email address" style="background:transparent; border-color:rgba(255,255,255,0.25); color:#fff;">
+          <button class="btn btn-primary btn-sm" type="submit">Join</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Maison Élégance. All rights reserved.</span>
+      <div class="flex gap-2">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <a href="gift-cards.html">Gift Cards</a>
+      </div>
+      <div class="payment-icons">
+        <span>Visa</span><span>Mastercard</span><span>Amex</span><span>Apple Pay</span><span>PayPal</span>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="drawer-overlay" data-drawer-overlay></div>
+<aside class="drawer" data-cart-drawer aria-label="Shopping bag">
+  <div class="drawer__header"><h3>Your Bag</h3><button aria-label="Close bag" data-cart-close>✕</button></div>
+  <div class="drawer__body" data-cart-body></div>
+  <div class="drawer__footer"><a href="checkout.html" class="btn btn-primary btn-block">Checkout</a></div>
+</aside>
+<script src="js/cart.js"></script>
+<script src="js/wishlist.js"></script>
+<script src="js/products-data.js"></script>
+<script src="js/products.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', async () => {
+  const products = await loadProducts();
+  const input = document.getElementById('searchInput');
+  const params = new URLSearchParams(location.search);
+  if (params.get('q')) input.value = params.get('q');
+
+  function runSearch(term) {
+    const q = term.trim().toLowerCase();
+    if (!q) {
+      document.getElementById('searchResults').innerHTML = '';
+      document.getElementById('searchResultCount').textContent = 'Start typing to search the full collection.';
+      document.getElementById('noResultsBlock').style.display = 'none';
+      return;
+    }
+    const results = products.filter(p =>
+      p.name.toLowerCase().includes(q) ||
+      p.category.toLowerCase().includes(q) ||
+      p.collection.toLowerCase().includes(q) ||
+      p.description.toLowerCase().includes(q)
+    );
+    document.getElementById('searchResultCount').textContent = `${results.length} results for "${term}"`;
+    renderProductGrid(results, '#searchResults');
+    document.getElementById('noResultsBlock').style.display = results.length ? 'none' : 'block';
+    if (!results.length) renderProductGrid(products.slice(0,4), '#trendingFallback');
+  }
+
+  input.addEventListener('input', () => runSearch(input.value));
+  document.querySelectorAll('[data-suggest]').forEach(btn => {
+    btn.addEventListener('click', () => { input.value = btn.dataset.suggest; runSearch(input.value); });
+  });
+  runSearch(input.value);
+});
+</script>
+</body>
+</html>

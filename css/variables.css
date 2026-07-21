@@ -1,0 +1,72 @@
+/* =============================================
+   MAISON ÉLÉGANCE — DESIGN TOKENS
+   ============================================= */
+:root {
+  /* Color */
+  --color-bg: #FFFFFF;
+  --color-bg-alt: #F8F8F6;
+  --color-black: #111111;
+  --color-gold: #C6A769;
+  --color-gold-soft: #D8BE84;
+  --color-gold-hover: #B99652;
+  --color-text: #666666;
+  --color-line: #EFEFEF;
+  --color-border: #E5E5E5;
+  --color-success: #2E7D32;
+  --color-error: #C62828;
+
+  /* Typography */
+  --font-display: 'Playfair Display', 'Georgia', serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+
+  --fs-hero: clamp(2.5rem, 5.2vw, 4.5rem);
+  --fs-h1: clamp(2.25rem, 4vw, 3.5rem);
+  --fs-h2: clamp(1.75rem, 3vw, 2.5rem);
+  --fs-h3: clamp(1.25rem, 2vw, 1.5rem);
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+  --fs-caption: 0.75rem;
+
+  /* Spacing (8px system) */
+  --sp-1: 8px;
+  --sp-2: 16px;
+  --sp-3: 24px;
+  --sp-4: 32px;
+  --sp-6: 48px;
+  --sp-8: 64px;
+  --sp-12: 96px;
+  --sp-15: 120px;
+
+  /* Layout */
+  --container-max: 1440px;
+  --content-max: 1280px;
+
+  /* Radius */
+  --radius-card: 18px;
+  --radius-btn: 999px;
+  --radius-img: 20px;
+  --radius-input: 14px;
+
+  /* Shadow */
+  --shadow-soft: 0 4px 24px rgba(17, 17, 17, 0.06);
+  --shadow-lift: 0 12px 40px rgba(17, 17, 17, 0.10);
+
+  /* Motion */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast: 250ms;
+  --dur-slow: 500ms;
+
+  /* Z-index */
+  --z-nav: 100;
+  --z-modal: 200;
+  --z-toast: 300;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
